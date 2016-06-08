@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :requests
+  resources :services
+  resources :user_knowledges
+  resources :knowledges
   devise_for :users
 
   root 'welcome#index'

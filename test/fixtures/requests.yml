@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  service_id: 
+  dateRequest: 2016-06-07 17:38:14
+  problemDescription: MyString
+
+two:
+  user_id: 
+  service_id: 
+  dateRequest: 2016-06-07 17:38:14
+  problemDescription: MyString

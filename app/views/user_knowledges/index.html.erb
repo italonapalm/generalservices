@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Knowledges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Knowledge</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_knowledges.each do |user_knowledge| %>
+      <tr>
+        <td><%= user_knowledge.user %></td>
+        <td><%= user_knowledge.knowledge %></td>
+        <td><%= user_knowledge.date %></td>
+        <td><%= link_to 'Show', user_knowledge %></td>
+        <td><%= link_to 'Edit', edit_user_knowledge_path(user_knowledge) %></td>
+        <td><%= link_to 'Destroy', user_knowledge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User knowledge', new_user_knowledge_path %>

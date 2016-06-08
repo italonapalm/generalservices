@@ -2,10 +2,8 @@
 
 one:
   description: MyString
-  string: MyString
   profession_id: 
 
 two:
   description: MyString
-  string: MyString
   profession_id: 

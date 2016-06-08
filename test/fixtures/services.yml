@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  visibility: false
+  initialDate: 2016-06-07 17:36:00
+  finalDate: 2016-06-07 17:36:00
+  description: MyString
+
+two:
+  user_id: 
+  visibility: false
+  initialDate: 2016-06-07 17:36:00
+  finalDate: 2016-06-07 17:36:00
+  description: MyString

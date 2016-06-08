@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_knowledge.user %>
+</p>
+
+<p>
+  <strong>Knowledge:</strong>
+  <%= @user_knowledge.knowledge %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @user_knowledge.date %>
+</p>
+
+<%= link_to 'Edit', edit_user_knowledge_path(@user_knowledge) %> |
+<%= link_to 'Back', user_knowledges_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @knowledge.description %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @knowledge.profession %>
+</p>
+
+<%= link_to 'Edit', edit_knowledge_path(@knowledge) %> |
+<%= link_to 'Back', knowledges_path %>
