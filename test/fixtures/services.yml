@@ -3,13 +3,13 @@
 one:
   user_id: 
   visibility: false
-  initialDate: 2016-06-07 17:36:00
-  finalDate: 2016-06-07 17:36:00
+  initialDate: 2016-06-08 16:11:58
+  finaldate: 2016-06-08 16:11:58
   description: MyString
 
 two:
   user_id: 
   visibility: false
-  initialDate: 2016-06-07 17:36:00
-  finalDate: 2016-06-07 17:36:00
+  initialDate: 2016-06-08 16:11:58
+  finaldate: 2016-06-08 16:11:58
   description: MyString

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607203814) do
+ActiveRecord::Schema.define(version: 20160608203533) do
 
   create_table "knowledges", force: :cascade do |t|
     t.string   "description",   limit: 255
@@ -30,21 +30,21 @@ ActiveRecord::Schema.define(version: 20160607203814) do
 
   create_table "requests", force: :cascade do |t|
     t.integer  "requester",          limit: 4
-    t.integer  "service_id",         limit: 4
+    t.integer  "order",              limit: 4
     t.datetime "dateRequest"
     t.string   "problemDescription", limit: 255
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
 
+  add_index "requests", ["order"], name: "index_requests_on_order", using: :btree
   add_index "requests", ["requester"], name: "index_requests_on_requester", using: :btree
-  add_index "requests", ["service_id"], name: "index_requests_on_service_id", using: :btree
 
   create_table "services", force: :cascade do |t|
     t.integer  "user_id",     limit: 4
     t.boolean  "visibility"
     t.datetime "initialDate"
-    t.datetime "finalDate"
+    t.datetime "finaldate"
     t.string   "description", limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
@@ -82,7 +82,8 @@ ActiveRecord::Schema.define(version: 20160607203814) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "knowledges", "professions"
-  add_foreign_key "requests", "services"
+  add_foreign_key "requests", "services", column: "order"
+  add_foreign_key "requests", "users", column: "requester"
   add_foreign_key "services", "users"
   add_foreign_key "user_knowledges", "knowledges"
   add_foreign_key "user_knowledges", "users"
